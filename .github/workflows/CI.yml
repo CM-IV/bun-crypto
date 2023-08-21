@@ -28,17 +28,17 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: |
-              npm build
+              npm run build
               strip -x *.node
           - host: windows-latest
-            build: npm build
+            build: npm run build
             target: x86_64-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
             build: |-
               set -e &&
-              npm build --target x86_64-unknown-linux-gnu &&
+              npm run build --target x86_64-unknown-linux-gnu &&
               strip *.node
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
@@ -142,7 +142,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: npm test
+        run: npm run test
   test-linux-x64-gnu-binding:
     name: Test bindings on Linux-x64-gnu - node@${{ matrix.node }}
     needs:
@@ -174,7 +174,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim npm test
+        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim npm run test
   publish:
     name: Publish
     runs-on: ubuntu-latest
@@ -196,7 +196,7 @@ jobs:
         with:
           path: artifacts
       - name: Move artifacts
-        run: npm artifacts
+        run: npm run artifacts
       - name: List packages
         run: ls -R ./npm
         shell: bash
