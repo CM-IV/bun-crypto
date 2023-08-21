@@ -1,6 +1,6 @@
 {
   "name": "@cm-iv/bun-crypto",
-  "version": "0.0.9",
+  "version": "0.0.8",
   "repository": {
     "url": "https://github.com/CM-IV/bun-crypto"
   },
@@ -23,11 +23,16 @@
   "license": "MIT",
   "napi": {
     "name": "bun-crypto",
-    "triples": {}
+    "triples": {
+      "defaults": false,
+      "additional": [
+        "x86_64-unknown-linux-gnu"
+      ]
+    }
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --release",
+    "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
