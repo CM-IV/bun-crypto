@@ -252,9 +252,10 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { genSecretKey, derivePubKey, encryptFile, decryptFile } = nativeBinding
+const { genSecretKey, derivePubKey, encryptFile, decryptFile, genFileHash } = nativeBinding
 
 module.exports.genSecretKey = genSecretKey
 module.exports.derivePubKey = derivePubKey
 module.exports.encryptFile = encryptFile
 module.exports.decryptFile = decryptFile
+module.exports.genFileHash = genFileHash

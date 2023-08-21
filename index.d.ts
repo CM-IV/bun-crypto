@@ -7,3 +7,4 @@ export function genSecretKey(): string
 export function derivePubKey(secret: string): string
 export function encryptFile(fileData: Uint8Array, pubStr: string): Uint8Array
 export function decryptFile(encryptedData: Uint8Array, secretKeyStr: string): Uint8Array
+export function genFileHash(inputFileData: Uint8Array): string

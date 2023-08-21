@@ -58,3 +58,14 @@ pub fn decrypt_file(encrypted_data: Uint8Array, secret_key_str: String) -> Uint8
   decrypted.as_slice().into()
   
 }
+
+#[napi]
+pub fn gen_file_hash(input_file_data: Uint8Array) -> String {
+
+  let hash_bytes = hmac_sha512::Hash::hash(input_file_data);
+
+  let hex_chars: Vec<String> = hash_bytes.iter().map(|byte| format!("{:02x}", byte)).collect();
+  let hash_str = hex_chars.join("");
+
+  hash_str
+}
