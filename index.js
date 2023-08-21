@@ -37,7 +37,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.android-arm64.node')
           } else {
-            nativeBinding = require('bun-crypto-android-arm64')
+            nativeBinding = require('@cm-iv/bun-crypto-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -49,7 +49,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.android-arm-eabi.node')
           } else {
-            nativeBinding = require('bun-crypto-android-arm-eabi')
+            nativeBinding = require('@cm-iv/bun-crypto-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -69,7 +69,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('bun-crypto-win32-x64-msvc')
+            nativeBinding = require('@cm-iv/bun-crypto-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -83,7 +83,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('bun-crypto-win32-ia32-msvc')
+            nativeBinding = require('@cm-iv/bun-crypto-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -97,7 +97,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('bun-crypto-win32-arm64-msvc')
+            nativeBinding = require('@cm-iv/bun-crypto-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -113,7 +113,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./bun-crypto.darwin-universal.node')
       } else {
-        nativeBinding = require('bun-crypto-darwin-universal')
+        nativeBinding = require('@cm-iv/bun-crypto-darwin-universal')
       }
       break
     } catch {}
@@ -124,7 +124,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.darwin-x64.node')
           } else {
-            nativeBinding = require('bun-crypto-darwin-x64')
+            nativeBinding = require('@cm-iv/bun-crypto-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -138,7 +138,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.darwin-arm64.node')
           } else {
-            nativeBinding = require('bun-crypto-darwin-arm64')
+            nativeBinding = require('@cm-iv/bun-crypto-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -157,7 +157,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./bun-crypto.freebsd-x64.node')
       } else {
-        nativeBinding = require('bun-crypto-freebsd-x64')
+        nativeBinding = require('@cm-iv/bun-crypto-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -174,7 +174,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./bun-crypto.linux-x64-musl.node')
             } else {
-              nativeBinding = require('bun-crypto-linux-x64-musl')
+              nativeBinding = require('@cm-iv/bun-crypto-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -187,7 +187,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./bun-crypto.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('bun-crypto-linux-x64-gnu')
+              nativeBinding = require('@cm-iv/bun-crypto-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -203,7 +203,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./bun-crypto.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('bun-crypto-linux-arm64-musl')
+              nativeBinding = require('@cm-iv/bun-crypto-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -216,7 +216,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./bun-crypto.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('bun-crypto-linux-arm64-gnu')
+              nativeBinding = require('@cm-iv/bun-crypto-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -231,7 +231,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./bun-crypto.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('bun-crypto-linux-arm-gnueabihf')
+            nativeBinding = require('@cm-iv/bun-crypto-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
