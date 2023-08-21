@@ -34,5 +34,11 @@
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version"
+  },
+  "optionalDependencies": {
+    "@cm-iv/bun-crypto-linux-x64-gnu": "0.0.5"
+  },
+  "dependencies": {
+    "@cm-iv/bun-crypto": "^0.0.5"
   }
 }
