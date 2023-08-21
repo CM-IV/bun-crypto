@@ -7,6 +7,11 @@
     "name": "bun-crypto",
     "triples": {}
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "bun-crypto.linux-x64-gnu.node"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@napi-rs/cli": "^2.16.3",
