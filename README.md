@@ -2,7 +2,7 @@
 
 A file encryption library for Node.js/Bun and backed by native Rust speed - uses the `age` Rust crate under the hood.
 
-Currently only works with GNU/Linux x64 targets.
+Currently only works with GNU/Linux x64 and MSVC Windows x64 targets.
 
 ## Exported Functions
 
@@ -22,7 +22,7 @@ encryptFile(fileData: Uint8Array, pubStr: string): Uint8Array
 // type `Uint8Array` when also provided the secret key string
 decryptFile(encryptedData: Uint8Array, secretKeyStr: string): Uint8Array
 
-// Generate a SHA512 hash string when given
+// Generate a SHA512 hash string when given -
 // file data of type `Uint8Array`
 genFileHash(fileData: Uint8Array): string
 ```
